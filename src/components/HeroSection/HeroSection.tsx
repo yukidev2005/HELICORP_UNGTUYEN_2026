@@ -6,6 +6,7 @@ export default function HeroSection() {
       {/* Background image with parallax effect */}
       <div className="absolute inset-0">
         <img
+          fetchPriority="high"
           className="w-full h-full object-cover scale-105"
           src="./images/ban-phim-co-wave75-4.webp"
           alt="PMO Wave75 Custom Keyboard"
