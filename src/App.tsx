@@ -1,4 +1,5 @@
 import ColorSection from "./components/ColorSection";
+import FeatureSection from "./components/Feature";
 import Header from "./components/header";
 import HeroSection from "./components/HeroSection";
 import { ThemeProvider } from "./components/ThemeProvider";
@@ -11,6 +12,7 @@ export default function App() {
         <div className="pt-20  space-y-8 2xl:space-y-0">
           <HeroSection />
           <ColorSection />
+          <FeatureSection />
         </div>
       </div>
     </ThemeProvider>
