@@ -47,23 +47,23 @@ const Logo = () => {
 
 const NavLinks = () => {
   const links = [
-    { name: "Products", href: "#products" },
     { name: "Colors", href: "#colors" },
     { name: "Features", href: "#features" },
+    { name: "Specs", href: "#specs" },
     { name: "Swith", href: "#swith" },
   ];
 
   return (
     <>
       {links.map((link) => (
-        <Link
+        <a
           key={link.name}
-          to={link.href}
-          className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors duration-200 relative group"
+          href={`/${link.href}`}
+          className="text-sm scroll-smooth font-medium text-foreground/80 hover:text-foreground transition-colors duration-200 relative group"
         >
           {link.name}
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-        </Link>
+        </a>
       ))}
     </>
   );
