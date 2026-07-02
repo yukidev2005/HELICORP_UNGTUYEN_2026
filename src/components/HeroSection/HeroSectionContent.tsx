@@ -34,7 +34,7 @@ const HeroSectionLeft = () => {
 
         <div className="flex flex-wrap md:justify-center 2xl:justify-start gap-3 my-8">
           {/* Primary CTA - Buy Now */}
-          <Button 
+          <Button
             size="lg"
             className="bg-white text-black hover:bg-white/90 hover:scale-105 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl"
           >
@@ -43,9 +43,8 @@ const HeroSectionLeft = () => {
           </Button>
 
           {/* Secondary CTA - View Specs */}
-          <Button 
+          <Button
             size="lg"
-      
             className=" text-white bg-black hover:bg-black hover:text-white transition-all duration-200 font-semibold"
           >
             <FileText className="mr-2 h-5 w-5" />
@@ -102,10 +101,10 @@ const AvalibleTag = () => {
 const KeyFeatureSpecs = () => {
   return (
     <div className="flex md:justify-center 2xl:justify-start  flex-wrap items-center gap-10">
-      {keyFeatureSpecs.map(({ detal, primary }) => (
+      {keyFeatureSpecs.map(({ detail, primary }) => (
         <div key={primary} className="text-nowrap">
           <h2 className="text-2xl font-black">{primary}</h2>
-          <h2 className="text-white/70">{detal}</h2>
+          <h2 className="text-white/70">{detail}</h2>
         </div>
       ))}
     </div>
