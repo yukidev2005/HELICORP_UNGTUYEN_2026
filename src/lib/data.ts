@@ -95,3 +95,59 @@ export const productKeyFeatures: KeyFeature[] = [
     img: "./images/8000mah.webp",
   },
 ];
+
+export const wave75Specs = [
+  {
+    title: "Layout",
+    details: "75% Layout (81 keys), pre-built",
+  },
+  {
+    title: "Structure",
+    details: "PCB Gasket Mount Structure",
+  },
+  {
+    title: "Body",
+    details: "CNC 6063 Aluminum Body",
+  },
+  {
+    title: "Assembly System",
+    details: "Quick Assembly System (ball-catch)",
+  },
+  {
+    title: "Base Weight",
+    details: "Mirrored / Stainless Steel PVD",
+  },
+  {
+    title: "Colors",
+    details:
+      "Anodized (Black, Silver, Red) / e-Coating (Purple) / Spray coated (Other)",
+  },
+  {
+    title: "PCB & Plate",
+    details: "1.2 Flex cut, hot swappable PCB & PP/FR4 Plate",
+  },
+  {
+    title: "Software Support",
+    details: "QMK/VIA Support",
+  },
+  {
+    title: "Sound Dampening",
+    details: "PORON/PET plate & bottom",
+  },
+  {
+    title: "Connectivity",
+    details: "USB-C / 2.4G / Bluetooth",
+  },
+  {
+    title: "Switch",
+    details: "Linear, Bamboo (HMX) / Snow (Kailh)",
+  },
+  {
+    title: "Keycaps",
+    details: "Color matching double shot PBT Cherry profile",
+  },
+  {
+    title: "Disclaimer",
+    details: "Actual color may vary from photo",
+  },
+];
