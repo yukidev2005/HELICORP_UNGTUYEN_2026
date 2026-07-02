@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import type { KeyFeature } from "@/lib/type";
+import type { KeyFeature } from "@/lib/types";
 
 export default function FeatureItem({
   keyFeatur,
@@ -8,7 +8,7 @@ export default function FeatureItem({
   keyFeatur: KeyFeature;
   reversed?: boolean;
 }) {
-  const label = keyFeatur.key;
+  const label = keyFeatur.title;
 
   return (
     <div
@@ -21,7 +21,7 @@ export default function FeatureItem({
       {/* Image card */}
       <div className="relative w-full md:w-[55%] aspect-video md:aspect-auto md:min-h-90 lg:min-h-100 shrink-0 overflow-hidden rounded-2xl lg:rounded-3xl">
         <img
-          src={keyFeatur.img}
+          src={keyFeatur.image}
           alt={label}
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
@@ -42,7 +42,7 @@ export default function FeatureItem({
 
         {/* Description */}
         <p className="text-muted-foreground text-base lg:text-[17px] leading-relaxed max-w-md">
-          {keyFeatur.detal}
+          {keyFeatur.detail}
         </p>
       </div>
     </div>
