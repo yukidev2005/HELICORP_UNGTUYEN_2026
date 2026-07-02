@@ -1,13 +1,15 @@
-import { products } from "@/lib/data";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { productVariants } from "@/lib/data";
 
 export default function ColorSection() {
-  const [product, setProduct] = useState(products[2]);
+  const [product, setProduct] = useState(productVariants[0]);
 
   const handleChangeColor = (color: string) => {
-    const newProduct = products.find((product) => product.color === color);
+    const newProduct = productVariants.find(
+      (product) => product.colorHex === color,
+    );
     if (newProduct) setProduct(newProduct);
   };
 
@@ -15,7 +17,7 @@ export default function ColorSection() {
     <div
       id="colors"
       style={{
-        background: product.color,
+        background: product.colorHex,
       }}
       className="min-h-screen 2xl:h-[calc(100dvh-80px)] relative overflow-hidden transition-colors duration-300 "
     >
@@ -43,9 +45,9 @@ export default function ColorSection() {
         {/* Color Selector với glassmorphism */}
         <ColorSelector
           handleChangeColor={handleChangeColor}
-          currentColor={product.color}
-          colors={products.map(({ color, colorName }) => ({
-            color,
+          currentColor={product.colorHex}
+          colors={productVariants.map(({ colorHex, colorName }) => ({
+            colorHex,
             colorName,
           }))}
         />
@@ -55,7 +57,7 @@ export default function ColorSection() {
 }
 
 interface iColorSelectorProps {
-  colors: { color: string; colorName: string }[];
+  colors: { colorHex: string; colorName: string }[];
   handleChangeColor: (color: string) => void;
   currentColor: string;
 }
@@ -68,23 +70,23 @@ const ColorSelector = ({
   return (
     <div className="backdrop-blur-2xl bg-white/10 rounded-3xl p-6 border border-white/20 shadow-2xl transition-all duration-500">
       <div className="flex flex-wrap gap-4 justify-center items-center max-w-4xl">
-        {colors.map(({ color, colorName }) => {
-          const isSelected = currentColor === color;
+        {colors.map(({ colorHex, colorName }) => {
+          const isSelected = currentColor === colorHex;
           return (
-            <div key={color} className="relative group">
+            <div key={colorHex} className="relative group">
               {/* Glow ring effect */}
               <div
                 className={cn(
                   "absolute -inset-1 rounded-2xl blur-lg transition-all duration-500",
                   isSelected ? "opacity-100" : "opacity-0",
                 )}
-                style={{ backgroundColor: color }}
+                style={{ backgroundColor: colorHex }}
               />
 
               {/* Button */}
               <Button
-                onClick={() => handleChangeColor(color)}
-                style={{ backgroundColor: color }}
+                onClick={() => handleChangeColor(colorHex)}
+                style={{ backgroundColor: colorHex }}
                 className={cn(
                   "relative w-20 h-20 rounded-2xl border-2 transition-all duration-500",
                   "active:scale-95",

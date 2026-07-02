@@ -15,7 +15,7 @@ export default function FeatureSection() {
         <div className="space-y-6 lg:space-y-8">
           {productKeyFeatures.map((keyFeatur, i) => (
             <FeatureItem
-              key={keyFeatur.key}
+              key={keyFeatur.id}
               keyFeatur={keyFeatur}
               reversed={i % 2 !== 0}
             />

@@ -1,122 +1,114 @@
-import type { KeyFeature } from "./type";
+import type {
+  KeyFeatureSpec,
+  ProductVariant,
+  KeyFeature,
+  SpecItem,
+  SwitchSpec,
+} from "./types";
 
-export const keyFeatureSpecs = [
-  {
-    primary: "75%",
-    detal: "Compact Layout",
-  },
-  {
-    primary: "USB-C",
-    detal: "Connection",
-  },
-  {
-    primary: "5-Pin",
-    detal: "Hot-Swap",
-  },
-  {
-    primary: "CNC",
-    detal: "Aluminum",
-  },
+export const keyFeatureSpecs: KeyFeatureSpec[] = [
+  { primary: "75%", detail: "Compact Layout" },
+  { primary: "USB-C", detail: "Connection" },
+  { primary: "5-Pin", detail: "Hot-Swap" },
+  { primary: "CNC", detail: "Aluminum" },
 ];
 
-export const products = [
+export const productVariants: ProductVariant[] = [
   {
-    image: "./images/ban-phim-co-wave75-pink.webp",
-    color: "#feece8",
+    id: "pink",
     colorName: "Pink",
+    colorHex: "#feece8",
+    image: "./images/ban-phim-co-wave75-pink.webp",
   },
   {
-    image: "./images/ban-phim-co-wave75-black.webp",
-    color: "#3a3b3f",
+    id: "black",
     colorName: "Black",
+    colorHex: "#3a3b3f",
+    image: "./images/ban-phim-co-wave75-black.webp",
   },
   {
-    image: "./images/ban-phim-co-wave75-blue.webp",
-    color: "#d4edf2",
+    id: "blue",
     colorName: "Blue",
+    colorHex: "#d4edf2",
+    image: "./images/ban-phim-co-wave75-blue.webp",
   },
   {
-    image: "./images/ban-phim-co-wave75-silver.webp",
-    color: "#e8e8e8",
+    id: "silver",
     colorName: "Silver",
+    colorHex: "#e8e8e8",
+    image: "./images/ban-phim-co-wave75-silver.webp",
   },
   {
-    image: "./images/ban-phim-co-wave75-red.webp",
-    color: "#da474d",
+    id: "red",
     colorName: "Red",
+    colorHex: "#da474d",
+    image: "./images/ban-phim-co-wave75-red.webp",
   },
   {
-    image: "./images/ban-phim-co-wave75-milky.webp",
-    color: "#f5f5dc",
+    id: "milky",
     colorName: "Milky",
+    colorHex: "#f5f5dc",
+    image: "./images/ban-phim-co-wave75-milky.webp",
   },
   {
-    image: "./images/ban-com-co-wave75-orange.webp",
-    color: "#de8043",
+    id: "orange",
     colorName: "Orange",
+    colorHex: "#de8043",
+    image: "./images/ban-phim-co-wave75-orange.webp",
   },
 ];
 
 export const productKeyFeatures: KeyFeature[] = [
   {
-    key: "magnetic-touch-needle",
-    detal:
+    id: "magnetic-touch-needle",
+    title: "Magnetic Touch Needle",
+    detail:
       "Gold-plated magnetic touch needle for quick two-piece disassembly and enhanced anti-oxidation in custom keyboards.",
-    img: "./images/mach-hit-nam-cham.webp",
+    image: "./images/mach-hit-nam-cham.webp",
   },
   {
-    key: "quick-release-structure",
-    detal:
+    id: "quick-release-structure",
+    title: "Quick Release Structure",
+    detail:
       "Quick release structure utilizing 4 groups of custom electroplated zinc alloy bead catches, allowing for adjustable disassembly strength.",
-    img: "./images/catch-ball.webp",
+    image: "./images/catch-ball.webp",
   },
   {
-    key: "pcb-slotting-area",
-    detal:
+    id: "pcb-slotting-area",
+    title: "PCB Slotting Area",
+    detail:
       "Specially adjusted PCB with varying horizontal slot areas and spacing at the Gasket to maintain typing consistency across key rows.",
-    img: "./images/flex-cut.webp",
+    image: "./images/flex-cut.webp",
   },
   {
-    key: "qmk-via-support",
-    detal:
+    id: "qmk-via-support",
+    title: "QMK / VIA Support",
+    detail:
       "Fully supports QMK (wired mode only) and VIA, allowing open-source customization of layouts, shortcuts, and backlighting via JSON file import.",
-    img: "./images/qmk-via-ready.webp",
+    image: "./images/qmk-via-ready.webp",
   },
   {
-    key: "75-percent-layout",
-    detal:
+    id: "75-percent-layout",
+    title: "75% Layout",
+    detail:
       "Compact and simple 75% layout with 81 keys, retaining essential function keys for a characteristic user experience.",
-    img: "./images/75-layout.webp",
+    image: "./images/75-layout.webp",
   },
   {
-    key: "battery-life",
-    detal:
+    id: "battery-life",
+    title: "Long Battery Life",
+    detail:
       "Equipped with an 8000mAh large-capacity battery and a low-power chip for long-lasting use without frequent charging (Note: Green bamboo shaft version is 4000mAh).",
-    img: "./images/8000mah.webp",
+    image: "./images/8000mah.webp",
   },
 ];
 
-export const wave75Specs = [
-  {
-    title: "Layout",
-    details: "75% Layout (81 keys), pre-built",
-  },
-  {
-    title: "Structure",
-    details: "PCB Gasket Mount Structure",
-  },
-  {
-    title: "Body",
-    details: "CNC 6063 Aluminum Body",
-  },
-  {
-    title: "Assembly System",
-    details: "Quick Assembly System (ball-catch)",
-  },
-  {
-    title: "Base Weight",
-    details: "Mirrored / Stainless Steel PVD",
-  },
+export const wave75Specs: SpecItem[] = [
+  { title: "Layout", details: "75% Layout (81 keys), pre-built" },
+  { title: "Structure", details: "PCB Gasket Mount Structure" },
+  { title: "Body", details: "CNC 6063 Aluminum Body" },
+  { title: "Assembly System", details: "Quick Assembly System (ball-catch)" },
+  { title: "Base Weight", details: "Mirrored / Stainless Steel PVD" },
   {
     title: "Colors",
     details:
@@ -126,28 +118,40 @@ export const wave75Specs = [
     title: "PCB & Plate",
     details: "1.2 Flex cut, hot swappable PCB & PP/FR4 Plate",
   },
-  {
-    title: "Software Support",
-    details: "QMK/VIA Support",
-  },
-  {
-    title: "Sound Dampening",
-    details: "PORON/PET plate & bottom",
-  },
-  {
-    title: "Connectivity",
-    details: "USB-C / 2.4G / Bluetooth",
-  },
-  {
-    title: "Switch",
-    details: "Linear, Bamboo (HMX) / Snow (Kailh)",
-  },
+  { title: "Software Support", details: "QMK/VIA Support" },
+  { title: "Sound Dampening", details: "PORON/PET plate & bottom" },
+  { title: "Connectivity", details: "USB-C / 2.4G / Bluetooth" },
+  { title: "Switch", details: "Linear, Bamboo (HMX) / Snow (Kailh)" },
   {
     title: "Keycaps",
     details: "Color matching double shot PBT Cherry profile",
   },
+  { title: "Disclaimer", details: "Actual color may vary from photo" },
+];
+
+export const switchSpecs: SwitchSpec[] = [
   {
-    title: "Disclaimer",
-    details: "Actual color may vary from photo",
+    id: "green-bamboo ",
+    name: "Green bamboo shaft (HMX)",
+    brand: "HMX",
+    axis: "POM modified",
+    upperCover: "PC",
+    bottomShell: "Nylon modified",
+    springLength: "21mm",
+    actuationForce: "45g",
+    travelDistance: "3.6mm",
+    imageUrl: "./images/hmx-1.png",
+  },
+  {
+    id: "xueqing",
+    name: "Xueqing shaft (Kaihua)",
+    brand: "Kaihua",
+    axis: "DuPont MXPom",
+    upperCover: "modified PC",
+    bottomShell: "Thickened Pa66",
+    springLength: "21mm",
+    actuationForce: "45g",
+    travelDistance: "3.6mm",
+    imageUrl: "./images/hmx-2.png",
   },
 ];

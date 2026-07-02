@@ -5,6 +5,7 @@ import Header from "./components/header";
 import HeroSection from "./components/HeroSection";
 import HomeLayout from "./components/layouts/HomeLayout";
 import SpecSection from "./components/Spec";
+import Switchs from "./components/Switchs";
 import { ThemeProvider } from "./components/ThemeProvider";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
             <ColorSection />
             <FeatureSection />
             <SpecSection />
+            <Switchs />
             <Footer />
           </div>
         </div>
