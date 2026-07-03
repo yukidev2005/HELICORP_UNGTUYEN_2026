@@ -7,8 +7,11 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           fetchPriority="high"
+          decoding="sync"
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover scale-105"
-          src="./images/ban-phim-co-wave75-4.webp"
+          src="/images/ban-phim-co-wave75-4.webp"
           alt="PMO Wave75 Custom Keyboard"
         />
         {/* Gradient overlay - lighter for better visibility */}
@@ -22,3 +25,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

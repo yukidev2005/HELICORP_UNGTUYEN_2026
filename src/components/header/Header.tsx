@@ -15,7 +15,7 @@ export default function Header() {
           <Logo />
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
             <NavLinks />
           </nav>
 
@@ -39,8 +39,9 @@ export default function Header() {
 
 const Logo = () => {
   return (
-    <a href="/" className="flex items-center gap-2 cursor-pointer group">
-      <h1 className="font-bold text-xl lg:text-2xl tracking-tight">PMO</h1>
+    <a href="/" className="flex items-center gap-2 cursor-pointer group" aria-label="PMO Home">
+      {/* Use span instead of h1 — the page's h1 is "PMO WAVE75" in HeroSection */}
+      <span className="font-bold text-xl lg:text-2xl tracking-tight">PMO</span>
     </a>
   );
 };
@@ -58,7 +59,7 @@ const NavLinks = () => {
       {links.map((link) => (
         <a
           key={link.name}
-          href={`/${link.href}`}
+          href={link.href}
           className="text-sm scroll-smooth font-medium text-foreground/80 hover:text-foreground transition-colors duration-200 relative group"
         >
           {link.name}
@@ -68,3 +69,4 @@ const NavLinks = () => {
     </>
   );
 };
+

@@ -1,4 +1,4 @@
-import { subscribeAPI } from "@/apis/SubscribeAPI";
+import { subscribeAPI } from "@/apis/subscribeAPI";
 import type { SubscribeDataType } from "@/lib/schema";
 import { useMutation } from "@tanstack/react-query";
 

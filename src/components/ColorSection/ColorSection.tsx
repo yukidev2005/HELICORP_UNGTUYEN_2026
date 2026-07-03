@@ -28,9 +28,13 @@ export default function ColorSection() {
           {/* Glass card */}
           <div className="relative backdrop-blur-xl bg-white/10 rounded-3xl p-8 border border-white/20 shadow-2xl transition-all duration-500">
             <img
+              loading="lazy"
+              decoding="async"
+              width={672}
+              height={500}
               className="mx-auto w-full max-w-2xl h-125 object-contain drop-shadow-2xl transition-all duration-700"
               src={product.image}
-              alt={product.colorName}
+              alt={`PMO Wave75 ${product.colorName} color variant`}
             />
 
             {/* Color name badge */}
@@ -55,6 +59,7 @@ export default function ColorSection() {
     </div>
   );
 }
+
 
 interface iColorSelectorProps {
   colors: { colorHex: string; colorName: string }[];
