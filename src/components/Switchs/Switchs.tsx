@@ -6,7 +6,7 @@ import { Separator } from "../ui/separator";
 
 export default function Switchs() {
   return (
-    <div dir="swith">
+    <div id="switchs">
       <SwitchsHeader />
       <div className="flex flex-wrap sm:flex-nowrap gap-5 w-full xl:max-w-7xl mx-auto">
         {switchSpecs.map((switchData) => (
@@ -70,7 +70,7 @@ const SwitchBox = ({ switchData }: { switchData: SwitchSpec }) => {
               .map((items) => (
                 <Fragment key={items[0]}>
                   <div className="flex group items-center justify-between">
-                    <h3 className="text-muted-foreground group-hover:text-white transition-colors duration-300">
+                    <h3 className="text-muted-foreground group-hover:text-foreground transition-colors font-bold duration-300">
                       {transfomText(items[0])}
                     </h3>
                     <h3>{items[1]}</h3>

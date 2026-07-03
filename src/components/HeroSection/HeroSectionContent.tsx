@@ -1,22 +1,20 @@
 import { keyFeatureSpecs } from "@/lib/data";
 import { Button } from "../ui/button";
-import SubriceFormDialog from "./SubriceFormDialog";
 import { useState } from "react";
 import { ShoppingCart, FileText, Bell } from "lucide-react";
+import SubscribeFormDialog from "./SubscribeFormDialog";
 
 export default function HeroSectionContent() {
   return (
-    <>
-      <div className="flex flex-wrap 2xl:flex-nowrap w-dvw items-center  justify-between  px-4 md:px-8 lg:px-15 ">
-        <HeroSectionLeft />
-        <HeroSectionRight />
-      </div>
-    </>
+    <div className="flex flex-wrap 2xl:flex-nowrap w-dvw items-center  justify-between  px-4 md:px-8 lg:px-15 ">
+      <HeroSectionLeft />
+      <HeroSectionRight />
+    </div>
   );
 }
 
 const HeroSectionLeft = () => {
-  const [SubriceFormDialogOepn, setSubriceFormDialogOpen] = useState(false);
+  const [subscribeFormDialogOpen, setSubscribeFormDialogOpen] = useState(false);
 
   return (
     <>
@@ -53,7 +51,7 @@ const HeroSectionLeft = () => {
 
           <Button
             size="lg"
-            onClick={() => setSubriceFormDialogOpen(true)}
+            onClick={() => setSubscribeFormDialogOpen(true)}
             variant="outline"
             className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all duration-200 font-semibold"
           >
@@ -64,9 +62,9 @@ const HeroSectionLeft = () => {
 
         <KeyFeatureSpecs />
       </div>
-      <SubriceFormDialog
-        onClose={() => setSubriceFormDialogOpen(false)}
-        isOpen={SubriceFormDialogOepn}
+      <SubscribeFormDialog
+        onClose={() => setSubscribeFormDialogOpen(false)}
+        isOpen={subscribeFormDialogOpen}
       />
     </>
   );

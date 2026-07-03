@@ -50,7 +50,7 @@ const NavLinks = () => {
     { name: "Colors", href: "#colors" },
     { name: "Features", href: "#features" },
     { name: "Specs", href: "#specs" },
-    { name: "Swith", href: "#swith" },
+    { name: "Switchs", href: "#switchs" },
   ];
 
   return (
