@@ -1,1 +1,1 @@
-export { default } from "./SpecSection";
+export { default } from './SpecSection';

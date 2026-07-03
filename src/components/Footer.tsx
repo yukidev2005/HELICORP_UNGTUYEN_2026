@@ -1,22 +1,22 @@
-import { Discord } from "@/components/Icons/Discord";
-import { Instagram } from "@/components/Icons/Instagram";
-import { XformerlyTwitter } from "@/components/Icons/XformerlyTwitter";
-import { Link } from "react-router";
+import { Discord } from '@/components/Icons/Discord';
+import { Instagram } from '@/components/Icons/Instagram';
+import { XformerlyTwitter } from '@/components/Icons/XformerlyTwitter';
+import { Link } from 'react-router';
 
 const socialLinks = [
   {
-    title: "Discord",
-    href: "#",
+    title: 'Discord',
+    href: '#',
     icon: <Discord />,
   },
   {
-    title: "Twitter",
-    href: "#",
+    title: 'Twitter',
+    href: '#',
     icon: <XformerlyTwitter />,
   },
   {
-    title: "Instagram",
-    href: "#",
+    title: 'Instagram',
+    href: '#',
     icon: <Instagram />,
   },
 ];
@@ -61,7 +61,7 @@ export default function Footer() {
             © {new Date().getFullYear()} PMO Engineering. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            {["Privacy Policy", "Terms of Service"].map((item) => (
+            {['Privacy Policy', 'Terms of Service'].map((item) => (
               <Link
                 key={item}
                 to="#"

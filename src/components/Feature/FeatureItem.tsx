@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import type { KeyFeature } from "@/lib/types";
+import { cn } from '@/lib/utils';
+import type { KeyFeature } from '@/lib/types';
 
 export default function FeatureItem({
   keyFeatur,
@@ -13,9 +13,9 @@ export default function FeatureItem({
   return (
     <div
       className={cn(
-        "relative flex flex-col gap-6",
-        "md:flex-row md:items-stretch md:gap-8 lg:gap-12",
-        reversed && "md:flex-row-reverse",
+        'relative flex flex-col gap-6',
+        'md:flex-row md:items-stretch md:gap-8 lg:gap-12',
+        reversed && 'md:flex-row-reverse',
       )}
     >
       {/* Image card */}
@@ -33,10 +33,10 @@ export default function FeatureItem({
       {/* Content card */}
       <div
         className={cn(
-          "flex flex-col justify-center",
-          "w-full md:flex-1",
-          "px-1 py-2 md:py-6",
-          reversed && "md:items-end md:text-right",
+          'flex flex-col justify-center',
+          'w-full md:flex-1',
+          'px-1 py-2 md:py-6',
+          reversed && 'md:items-end md:text-right',
         )}
       >
         {/* Main title */}

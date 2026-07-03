@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Button } from "../ui/button";
-import { cn } from "@/lib/utils";
-import { productVariants } from "@/lib/data";
+import { useState } from 'react';
+import { Button } from '../ui/button';
+import { cn } from '@/lib/utils';
+import { productVariants } from '@/lib/data';
 
 export default function ColorSection() {
   const [product, setProduct] = useState(productVariants[0]);
@@ -82,8 +82,8 @@ const ColorSelector = ({
               {/* Glow ring effect */}
               <div
                 className={cn(
-                  "absolute -inset-1 rounded-2xl blur-lg transition-all duration-500",
-                  isSelected ? "opacity-100" : "opacity-0",
+                  'absolute -inset-1 rounded-2xl blur-lg transition-all duration-500',
+                  isSelected ? 'opacity-100' : 'opacity-0',
                 )}
                 style={{ backgroundColor: colorHex }}
               />
@@ -93,11 +93,11 @@ const ColorSelector = ({
                 onClick={() => handleChangeColor(colorHex)}
                 style={{ backgroundColor: colorHex }}
                 className={cn(
-                  "relative w-20 h-20 rounded-2xl border-2 transition-all duration-500",
-                  "active:scale-95",
+                  'relative w-20 h-20 rounded-2xl border-2 transition-all duration-500',
+                  'active:scale-95',
                   isSelected
-                    ? "border-white shadow-2xl scale-110"
-                    : "border-white/40",
+                    ? 'border-white shadow-2xl scale-110'
+                    : 'border-white/40',
                 )}
               >
                 {/* Inner highlight */}

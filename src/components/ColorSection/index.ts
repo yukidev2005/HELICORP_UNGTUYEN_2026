@@ -1,1 +1,1 @@
-export { default } from "./ColorSection";
+export { default } from './ColorSection';

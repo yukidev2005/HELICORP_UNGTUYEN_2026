@@ -1,5 +1,5 @@
-import { productKeyFeatures } from "@/lib/data";
-import FeatureItem from "./FeatureItem";
+import { productKeyFeatures } from '@/lib/data';
+import FeatureItem from './FeatureItem';
 
 export default function FeatureSection() {
   return (
@@ -34,7 +34,7 @@ const FeatureHeader = () => {
         WHY WAVE75
       </span>
       <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-        <span className="text-foreground">Engineered for</span>{" "}
+        <span className="text-foreground">Engineered for</span>{' '}
         <span className="bg-linear-to-r from-pink-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
           Perfection
         </span>

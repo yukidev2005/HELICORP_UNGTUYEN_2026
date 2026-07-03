@@ -1,6 +1,6 @@
-import { subscribeAPI } from "@/apis/subscribeAPI";
-import type { SubscribeDataType } from "@/lib/schema";
-import { useMutation } from "@tanstack/react-query";
+import { subscribeAPI } from '@/apis/subscribeAPI';
+import type { SubscribeDataType } from '@/lib/schema';
+import { useMutation } from '@tanstack/react-query';
 
 export const useSubscribeToProductMutation = () => {
   const handleSubscribeToProduct = async (payload: SubscribeDataType) => {
@@ -12,7 +12,7 @@ export const useSubscribeToProductMutation = () => {
   };
 
   return useMutation({
-    mutationKey: ["subscribe", "product"],
+    mutationKey: ['subscribe', 'product'],
     mutationFn: handleSubscribeToProduct,
   });
 };

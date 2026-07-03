@@ -26,16 +26,29 @@ export default defineConfig({
         // Split vendor libraries into separate cached chunks
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+            if (
+              id.includes('react') ||
+              id.includes('react-dom') ||
+              id.includes('react-router')
+            ) {
               return 'vendor-react';
             }
             if (id.includes('@tanstack/react-query')) {
               return 'vendor-query';
             }
-            if (id.includes('@radix-ui') || id.includes('class-variance-authority') || id.includes('clsx') || id.includes('tailwind-merge')) {
+            if (
+              id.includes('@radix-ui') ||
+              id.includes('class-variance-authority') ||
+              id.includes('clsx') ||
+              id.includes('tailwind-merge')
+            ) {
               return 'vendor-ui';
             }
-            if (id.includes('react-hook-form') || id.includes('@hookform') || id.includes('zod')) {
+            if (
+              id.includes('react-hook-form') ||
+              id.includes('@hookform') ||
+              id.includes('zod')
+            ) {
               return 'vendor-form';
             }
             if (id.includes('lucide-react')) {

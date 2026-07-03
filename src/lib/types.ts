@@ -1,11 +1,11 @@
 export type ColorName =
-  | "Pink"
-  | "Black"
-  | "Blue"
-  | "Silver"
-  | "Red"
-  | "Milky"
-  | "Orange";
+  | 'Pink'
+  | 'Black'
+  | 'Blue'
+  | 'Silver'
+  | 'Red'
+  | 'Milky'
+  | 'Orange';
 
 export interface KeyFeatureSpec {
   primary: string;

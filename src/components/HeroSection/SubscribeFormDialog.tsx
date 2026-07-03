@@ -1,17 +1,17 @@
-"use no memo";
+'use no memo';
 
-import { Controller, useForm } from "react-hook-form";
-import { Dialog, DialogContent } from "../ui/dialog";
-import { subscribeSchema, type SubscribeDataType } from "@/lib/schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Field, FieldError, FieldGroup, FieldLabel } from "../ui/field";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { Loader2, Mail, User } from "lucide-react";
-import { toast } from "sonner";
-import { useSubscribeToProductMutation } from "./mutations";
-import { Textarea } from "../ui/textarea";
-import RequiredLabel from "../RequiredLabel";
+import { Controller, useForm } from 'react-hook-form';
+import { Dialog, DialogContent } from '../ui/dialog';
+import { subscribeSchema, type SubscribeDataType } from '@/lib/schema';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Field, FieldError, FieldGroup, FieldLabel } from '../ui/field';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
+import { Loader2, Mail, User } from 'lucide-react';
+import { toast } from 'sonner';
+import { useSubscribeToProductMutation } from './mutations';
+import { Textarea } from '../ui/textarea';
+import RequiredLabel from '../RequiredLabel';
 
 interface ISubriceFormDialogProps {
   isOpen: boolean;
@@ -26,12 +26,12 @@ export default function SubscribeFormDialog({
 
   const form = useForm<SubscribeDataType>({
     defaultValues: {
-      name: "",
-      email: "",
-      message: "",
+      name: '',
+      email: '',
+      message: '',
     },
     resolver: zodResolver(subscribeSchema),
-    mode: "onTouched",
+    mode: 'onTouched',
   });
 
   const handleSubrice = async (value: SubscribeDataType) => {
@@ -39,7 +39,7 @@ export default function SubscribeFormDialog({
       onSuccess: () => {
         onClose();
         form.reset();
-        toast("Susscess.");
+        toast('Susscess.');
       },
     });
   };
@@ -158,7 +158,7 @@ export default function SubscribeFormDialog({
             type="submit"
             className="w-full h-11 text-base font-medium"
           >
-            {!isPending ? "subscribe" : <Loader2 className=" animate-spin" />}
+            {!isPending ? 'subscribe' : <Loader2 className=" animate-spin" />}
           </Button>
 
           <p className="text-xs text-center text-muted-foreground pt-2">

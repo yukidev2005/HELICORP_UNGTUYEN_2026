@@ -1,6 +1,6 @@
-import type { ComponentProps, PropsWithChildren } from "react";
-import { FieldLabel } from "./ui/field";
-import { Label } from "@/components/ui/label";
+import type { ComponentProps, PropsWithChildren } from 'react';
+import { FieldLabel } from './ui/field';
+import { Label } from '@/components/ui/label';
 
 export default function RequiredLabel({
   children,
