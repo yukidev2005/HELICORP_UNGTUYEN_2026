@@ -23,6 +23,10 @@ export default function FeatureItem({
         <img
           src={keyFeatur.image}
           alt={label}
+          loading="lazy"
+          decoding="async"
+          width={800}
+          height={500}
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
       </div>
@@ -48,3 +52,4 @@ export default function FeatureItem({
     </div>
   );
 }
+

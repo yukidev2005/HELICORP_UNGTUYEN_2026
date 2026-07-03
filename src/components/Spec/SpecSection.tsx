@@ -8,7 +8,7 @@ export default function SpecSection() {
       className='relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden'
     >
       {/* Background decorative elements */}
-      <div className='absolute inset-0 pointer-events-none'>
+      <div className='absolute inset-0 pointer-events-none' aria-hidden='true'>
         <div className='absolute top-20 -left-32 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl' />
         <div className='absolute bottom-20 -right-32 w-96 h-96 bg-violet-500/5 rounded-full blur-3xl' />
       </div>
@@ -20,8 +20,12 @@ export default function SpecSection() {
         <div className='flex flex-col xl:flex-row gap-12 xl:gap-16 items-start'>
           <div className='w-full xl:w-[48%]'>
             <img
-              src='./images/specs.webp'
-              alt='PMO Wave75 Specifications'
+              src='/images/specs.webp'
+              alt='PMO Wave75 Specifications diagram'
+              loading='lazy'
+              decoding='async'
+              width={900}
+              height={600}
               className='w-full h-auto object-cover '
             />
           </div>
@@ -35,6 +39,7 @@ export default function SpecSection() {
     </section>
   );
 }
+
 
 const SpecHeader = () => {
   return (

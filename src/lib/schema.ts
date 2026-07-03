@@ -6,6 +6,7 @@ const requiredString = (fieldName: string) =>
 export const subscribeSchema = z.object({
   name: requiredString("Name"),
   email: z.email("Invalid email format"),
+  message: z.string().optional(),
 });
 
 export type SubscribeDataType = z.infer<typeof subscribeSchema>;

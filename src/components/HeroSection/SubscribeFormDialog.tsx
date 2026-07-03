@@ -9,37 +9,39 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Loader2, Mail, User } from "lucide-react";
 import { toast } from "sonner";
-import { useState } from "react";
+import { useSubscribeToProductMutation } from "./mutations";
+import { Textarea } from "../ui/textarea";
+import RequiredLabel from "../RequiredLabel";
 
 interface ISubriceFormDialogProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export default function SubriceFormDialog({
+export default function SubscribeFormDialog({
   isOpen,
   onClose,
 }: ISubriceFormDialogProps) {
-  const [isPending, setIsPending] = useState(false);
+  const { mutate, isPending } = useSubscribeToProductMutation();
 
   const form = useForm<SubscribeDataType>({
     defaultValues: {
       name: "",
       email: "",
+      message: "",
     },
     resolver: zodResolver(subscribeSchema),
     mode: "onTouched",
   });
 
   const handleSubrice = async (value: SubscribeDataType) => {
-    setIsPending(true);
-    setTimeout(() => {
-      console.log(value);
-      onClose();
-      setIsPending(false);
-      form.reset();
-      toast("Susscess.");
-    }, 1000);
+    mutate(value, {
+      onSuccess: () => {
+        onClose();
+        form.reset();
+        toast("Susscess.");
+      },
+    });
   };
 
   const handleCloseDialog = (open: boolean) => {
@@ -68,9 +70,9 @@ export default function SubriceFormDialog({
               control={form.control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel className="text-sm font-medium">
+                  <RequiredLabel className="text-sm font-medium">
                     Full Name
-                  </FieldLabel>
+                  </RequiredLabel>
                   <div className="relative">
                     <div className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
                       <User className="h-4 w-4" />
@@ -99,9 +101,9 @@ export default function SubriceFormDialog({
               control={form.control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel className="text-sm font-medium">
+                  <RequiredLabel className="text-sm font-medium">
                     Email Address
-                  </FieldLabel>
+                  </RequiredLabel>
                   <div className="relative">
                     <div className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
                       <Mail className="h-4 w-4" />
@@ -113,6 +115,30 @@ export default function SubriceFormDialog({
                       aria-invalid={fieldState.invalid}
                       autoComplete="email"
                       className="pl-10 h-11 transition-all focus:ring-2 focus:ring-primary/20"
+                    />
+                  </div>
+                  {fieldState.invalid && (
+                    <FieldError
+                      errors={[fieldState.error]}
+                      className="text-xs mt-1.5"
+                    />
+                  )}
+                </Field>
+              )}
+            />
+            {/* NOte Field */}
+            <Controller
+              name="message"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel className="text-sm font-medium">Note</FieldLabel>
+                  <div>
+                    <Textarea
+                      {...field}
+                      className="min-h-50"
+                      placeholder="text note to shop"
+                      aria-invalid={fieldState.invalid}
                     />
                   </div>
                   {fieldState.invalid && (
