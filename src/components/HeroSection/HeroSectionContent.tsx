@@ -75,8 +75,6 @@ const HeroSectionRight = () => {
   return (
     <div className='mx-auto'>
       <img
-        loading='lazy'
-        decoding='async'
         width={600}
         height={400}
         className='w-full  h-full object-cover block'
