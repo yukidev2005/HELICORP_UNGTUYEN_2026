@@ -1,1 +1,1 @@
-export { default } from './Switchs';
+export { default } from './SwitchsSection';
