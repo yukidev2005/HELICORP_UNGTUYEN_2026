@@ -19,15 +19,15 @@ export default function FeatureItem({
       )}
     >
       {/* Image card */}
-      <div className="relative w-full md:w-[55%] aspect-video md:aspect-auto md:min-h-90 lg:min-h-100 shrink-0 overflow-hidden rounded-2xl lg:rounded-3xl">
+      <div className='relative w-full md:w-[55%] aspect-video md:aspect-auto md:min-h-90 lg:min-h-100 shrink-0 overflow-hidden rounded-2xl lg:rounded-3xl'>
         <img
           src={keyFeatur.image}
           alt={label}
-          loading="lazy"
-          decoding="async"
-          width={800}
-          height={500}
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          loading='lazy'
+          decoding='async'
+          width={750}
+          height={450}
+          className='w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105'
         />
       </div>
       {/* Content card */}
@@ -40,16 +40,15 @@ export default function FeatureItem({
         )}
       >
         {/* Main title */}
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-5 tracking-tight">
+        <h3 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-5 tracking-tight'>
           {label}
         </h3>
 
         {/* Description */}
-        <p className="text-muted-foreground text-base lg:text-[17px] leading-relaxed max-w-md">
+        <p className='text-muted-foreground text-base lg:text-[17px] leading-relaxed max-w-md'>
           {keyFeatur.detail}
         </p>
       </div>
     </div>
   );
 }
-
