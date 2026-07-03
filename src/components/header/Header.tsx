@@ -1,7 +1,7 @@
-import { ModeToggle } from "../ModeToggle";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router";
-import HeaderSheet from "./HeaderSheet";
+import { ModeToggle } from '../ModeToggle';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router';
+import HeaderSheet from './HeaderSheet';
 
 export default function Header() {
   return (
@@ -23,7 +23,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <ModeToggle />
             <Button className="hidden font-semibold bg-foreground text-background sm:inline-flex    transition-all duration-300 hover:scale-105">
-              <Link target="_blank" to={"https://soigear.vn/wave-75"}>
+              <Link target="_blank" to={'https://soigear.vn/wave-75'}>
                 Buy Now
               </Link>
             </Button>
@@ -48,10 +48,10 @@ const Logo = () => {
 
 const NavLinks = () => {
   const links = [
-    { name: "Colors", href: "#colors" },
-    { name: "Features", href: "#features" },
-    { name: "Specs", href: "#specs" },
-    { name: "Switchs", href: "#switchs" },
+    { name: 'Colors', href: '#colors' },
+    { name: 'Features', href: '#features' },
+    { name: 'Specs', href: '#specs' },
+    { name: 'Switchs', href: '#switchs' },
   ];
 
   return (
