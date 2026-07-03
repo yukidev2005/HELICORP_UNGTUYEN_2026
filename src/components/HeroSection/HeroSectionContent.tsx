@@ -49,13 +49,14 @@ const HeroSectionLeft = () => {
             View Specs
           </Button>
 
-          {/* Get Info Button */}
+          {/* Get Notified Button */}
           <Button
             size='lg'
             onClick={() => setSubscribeFormDialogOpen(true)}
-            variant='outline'
-            className='border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all duration-200 font-semibold'
+            className='relative overflow-hidden bg-linear-to-r from-violet-600 to-indigo-500 text-white font-semibold shadow-lg shadow-violet-700/40 hover:shadow-violet-600/60 hover:scale-105 transition-all duration-200 hover:from-violet-500 hover:to-indigo-400'
           >
+            {/* glow ring */}
+            <span className='pointer-events-none absolute inset-0 rounded-md ring-2 ring-violet-400/40' />
             <Bell className='mr-2 h-5 w-5' />
             Get Notified
           </Button>
